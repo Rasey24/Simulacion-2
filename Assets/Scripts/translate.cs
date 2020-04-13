@@ -2,20 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class translate : MonoBehaviour {
+public class translate : MonoBehaviour
+{
     public float speed = 10.0f;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
-    void Update() {
-        moveCharacter(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-     void moveCharacter(Vector2 direction){
+    void Update()
+    {
+        moveCharacter(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+
+        void moveCharacter(Vector2 direction)
+        {
             transform.Translate(direction * speed * Time.deltaTime);
 
 
         }
+    }
 }
